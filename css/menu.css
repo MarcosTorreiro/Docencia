@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'SigmarOne-Regular';
+  src: url('../other/fonts/SigmarOne-Regular.ttf');
+}
+ /* Menu de abajo */
+#main{
+  height: 50px;
+  width: 50px;
+  background-color: #CB2626;
+  border-radius: 50%;
+  position: fixed;
+  left: 3%;
+  top:95%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-family: 'SigmarOne-Regular';
+}
+
+#main:hover{
+  cursor: pointer;
+}
+
+#icon{
+  height: 8px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu{
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 20%;
+  left:54%;
+  transform: translate(-50%, -50%);
+}
+
+#menu-layer{
+  height: 0px;
+  width: 0px;
+  background-color: #E37474;
+  border-radius: 50%;
+  position: fixed;
+  left: 1.5%;
+  top:94%;
+  transform: translate(-50%, -50%);
+}
+
+#menu a{
+  text-decoration: none;
+  color: white;
+}
+
+#menu ul{
+  height: 300px;
+  width: 200px;
+  text-align: center;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#menu ul li{
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+}
+
+#menu ul li:hover{
+  cursor: pointer;
+}
+
+#menu ul li:hover::before{
+  content: '';
+  height: 4px;
+  width: 10px;
+  background-color: white;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -18px;
+}
+
+#menu ul li:hover::after{
+  content: '';
+  height: 4px;
+  width: 10px;
+  background-color: white;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 3px;
+}
+
+/* Menu usuario */
+
+#second-circle{
+  height: 0px;
+  width: 0px;
+  background-color: #CB2626;
+  border-radius: 50%;
+  position: fixed;
+  left: 100%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-family: 'SigmarOne-Regular';
+}
+
+#user-info{
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top:70%;
+  left:30%;
+  transform: translate(-50%, -50%);
+}
+
+#container{
+  opacity: 0;
+  visibility: hidden;
+}
+
+#acceso{
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+#acceso:hover::before{
+  content: '';
+  height: 4px;
+  width: 15px;
+  background-color: white;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -20px;
+}
+
+#acceso:hover::after{
+  content: '';
+  height: 4px;
+  width: 15px;
+  background-color: white;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+#user-info a{
+  text-decoration: none;
+  color: white;
+}
+
+#close{
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top:55%;
+  left:45%;
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+#second-circle-layer{
+  height: 0px;
+  width: 0px;
+  background-color: #E37474;
+  border-radius: 50%;
+  position: fixed;
+  left: 99.5%;
+  top:-1.5%;
+  transform: translate(-50%, -50%);
+}

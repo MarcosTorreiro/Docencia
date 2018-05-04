@@ -1,0 +1,26 @@
+form{
+  width: 400px;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  text-align: center;
+}
+
+input{
+  border: none;
+  border-bottom: solid 2px #C9CACB;
+}
+
+input:focus{
+  outline:0px;
+  border-bottom: solid 2px red;
+}
+
+#formregis{
+  display: none;
+}
+
+#login:hover{
+  background-color: #2996E6;
+  color: white;
+}

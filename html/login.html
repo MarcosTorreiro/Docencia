@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Docencia para la formación del empleo</title>
+  </head>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../js/menu.js"></script>
+  <body>
+        <form class="mui-form" id="formlogin">
+          <legend>Acceso</legend>
+          <div>
+            <input type="text" id="name" placeholder="Usuario">
+          </div>
+          <div>
+            <input type="text" value="" id="password" placeholder="Contraseña">
+          </div>
+          <button type="submit" id="login">Entrar</button>
+          <p>Todavia no estas registrado? <a href="#">Registrate</a></p>
+        </form>
+        <form class="mui-form" id="formregis">
+          <legend>Registro</legend>
+          <div>
+            <input type="text" id="user" required placeholder="Usuario">
+          </div>
+          <div>
+            <input type="text" value="" id="pass" required placeholder="Contraseña">
+          </div>
+          <div>
+            <input type="text" value="" id="copypassword" required placeholder="Repita contraseña">
+          </div>
+          <button type="submit" id="login">Registrarse</button>
+          <p>Si ya tienes una cuenta <a href="#">accede aqui</a>.</p>
+        </form>
+      <div id="main">
+        <img src="../other/img/Menu Icon.png" id="icon">
+        <div id="menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="menu-layer"></div>
+      <div id="second-circle">
+        <div id="container">
+          <label id="close">+</label>
+          <div id="user-info">
+            <a href="login.html" id="acceso">Acceder</a>
+          </div>
+        </div>
+      </div>
+      <div id="second-circle-layer"></div>
+  </body>
+</html>

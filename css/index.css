@@ -1,0 +1,28 @@
+body{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: url('../other/img/book.jpeg') 100% 50% no-repeat;
+  background-size: cover;
+  font-family: 'SigmarOne-Regular';
+}
+
+@font-face {
+  font-family: 'SigmarOne-Regular';
+  src: url('../other/fonts/SigmarOne-Regular.ttf');
+}
+
+/*  Titulo  */
+
+#title{
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  text-align: center;
+}
+
+h1{
+  width: 250px;
+ font-size: 7vh;
+ color: #3A76AD;
+}

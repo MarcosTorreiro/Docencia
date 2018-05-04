@@ -34,7 +34,7 @@ function insertUser($datos)
     $bd = conectar();
     $query = 'INSERT INTO usuario (nombre, password) VALUES (:usuario,:password)';
     $resultado = $bd->prepare($query);
-    $resultado->bindParam(':usuario', $datos['usuario']);
+    $resultado->bindParam(':usuario', $datos['Nombre']);
     $resultado->bindParam(':password', $datos['password']);
 
     return $resultado->execute();

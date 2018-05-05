@@ -6,7 +6,7 @@
 #main{
   height: 50px;
   width: 50px;
-  background-color: #CB2626;
+  background-color: #2DAD1C;
   border-radius: 50%;
   position: fixed;
   left: 3%;
@@ -41,7 +41,7 @@
 #menu-layer{
   height: 0px;
   width: 0px;
-  background-color: #E37474;
+  background-color: #87E77A;
   border-radius: 50%;
   position: fixed;
   left: 1.5%;
@@ -100,7 +100,7 @@
 #second-circle{
   height: 0px;
   width: 0px;
-  background-color: #CB2626;
+  background-color: #2DAD1C;
   border-radius: 50%;
   position: fixed;
   left: 100%;
@@ -168,7 +168,7 @@
 #second-circle-layer{
   height: 0px;
   width: 0px;
-  background-color: #E37474;
+  background-color: #87E77A;
   border-radius: 50%;
   position: fixed;
   left: 99.5%;

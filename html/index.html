@@ -5,33 +5,63 @@
     <title>Docencia para la formación del empleo</title>
   </head>
   <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/menu.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../js/menu.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwiHTlJBE5TLotQGjWtBFGzhBGutZWmRs&callback=initMap"></script>
+  <script src="../js/index.js"></script>
   <body>
-    <header>
-      <h1>Docencia para la formación del empleo</h1>
-    </header>
-    <div id="main">
-      <img src="../other/img/Menu Icon.png" id="icon">
-      <div id="menu">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="recursos.html">Recursos</a></li>
-        </ul>
-      </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a id="inicio" href="#">Inicio</a></li>
+        <li><a id="saber" href="#">Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="banner">
+    <div id="photo">
+      <div class="capa-gradiente"></div>
     </div>
-    <div id="menu-layer"></div>
-    <div id="second-circle">
-      <div id="container">
-        <label id="close">+</label>
-        <div id="user-info">
-          <a href="login.html" id="acceso">Acceder</a>
+     <div id="presentacion">
+      <h1>Curso de docencia para la formación del empleo</h1>
+      <p>Sed bienvenidos al mundo de la docencia. En este curso aprenderas metodologias,
+      programación de contenidos,... para poder formar a nuevos profesionales.</p>
+      <input type="button" id="nosotros" value="Saber mas...">
+    </div>
+  </div>
+
+  <section>
+    <h2>Sobre Nosotros</h2>
+    <article>
+      <div class="informacion">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+         ea commodo consequat. Duis aute irure dolor in reprehenderit in
+         voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         Excepteur sint occaecat cupidatat non proident,
+         sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-      </div>
-    </div>
-    <div id="second-circle-layer"></div>
+        <div id="mapa"></div>
+    </article>
+  </section>
+
   </body>
+  <script type="text/javascript">
+    function initMap() {
+      var coor = {
+        lat: 43.141525,
+        lng: -8.040651
+      };
+      var map = new google.maps.Map(document.getElementById('mapa'), {
+        zoom: 15,
+        center: coor
+      });
+      var marker = new google.maps.Marker({
+        position: coor,
+        map: map
+      });
+    }
+  </script>
 </html>

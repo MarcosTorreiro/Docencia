@@ -42,6 +42,9 @@ transition: 0.75s opacity;
   border: solid 2px #F1A42D;
   cursor: pointer;
 }
+#presentacion input:focus{
+  outline:0px;
+}
 
 #photo{
   position: absolute;

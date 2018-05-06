@@ -1,7 +1,6 @@
 body{
   margin: 0;
   padding: 0;
-  height: 2900px;
   font-family: 'MavenPro-Medium';
 }
 
@@ -54,7 +53,6 @@ transition: 0.75s opacity;
   background: url('../other/img/people.jpg') no-repeat 50% 50%;
   background-size: cover;
   background-attachment: fixed;
-  filter: blur(3px);
 }
 
 .capa-gradiente{
@@ -99,7 +97,7 @@ article img{
 }
 
 #mapa{
-  width: 500px;
+  width: 400px;
   height: 300px;
 }
 

@@ -5,9 +5,12 @@
     <title>Docencia para la formación del empleo</title>
   </head>
   <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/lightbox.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwiHTlJBE5TLotQGjWtBFGzhBGutZWmRs&callback=initMap"></script>
   <script src="../js/index.js"></script>
+  <script src="../js/lightbox.js"></script>
   <body>
   <header>
     <nav>
@@ -43,10 +46,68 @@
          Excepteur sint occaecat cupidatat non proident,
          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
+        <div id="vacio"></div>
         <div id="mapa"></div>
     </article>
+    <article>
+        <img src="../other/img/class.jpg" alt="">
+        <div id="vacio"></div>
+        <div class="informacion">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+           ea commodo consequat. Duis aute irure dolor in reprehenderit in
+           voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+           Excepteur sint occaecat cupidatat non proident,
+           sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </article>
   </section>
-
+  <div id="titulogaleria">
+    <h2>Galeria</h2>
+  </div>
+  <div id="galeria" class="slider-nav">
+    <div class="row">
+      <div class="column">
+        <img src="../other/img/photo1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img src="../other/img/photo2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img src="../other/img/class.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img src="../other/img/gallery.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+      </div>
+    </div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="../other/img/photo1.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="../other/img/photo2.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="../other/img/class.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="../other/img/gallery.jpg" style="width:100%; height:800px;">
+        </div>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+  </div>
+  <footer></footer>
   </body>
   <script type="text/javascript">
     function initMap() {

@@ -23,7 +23,7 @@ $(document).ready(function(){
 
    $('#nosotros').click(function(){
      $('html, body').animate({
-        scrollTop: 925
+        scrollTop: $(h2).offset().top
     }, 2000);
    });
 
@@ -35,7 +35,7 @@ $(document).ready(function(){
 
    $('#saber').click(function(){
      $('html, body').animate({
-        scrollTop: $(h2).offset().top
+        scrollTop: 925
     }, 2000);
    });
 

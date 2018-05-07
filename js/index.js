@@ -35,7 +35,7 @@ $(document).ready(function(){
 
    $('#saber').click(function(){
      $('html, body').animate({
-        scrollTop: 925
+        scrollTop: $('h2').offset().top
     }, 2000);
    });
 

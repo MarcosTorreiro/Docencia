@@ -115,7 +115,7 @@ article img{
   margin: 0;
   padding: 15px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column;
   width: 35%;
@@ -123,8 +123,12 @@ article img{
   text-align: justify;
 }
 
+.docente li{
+  margin-bottom: 5px;
+}
+
 span{
-  font-size: 19px;
+  font-size: 20px;
   font-style: oblique;
   text-decoration: underline;
 }

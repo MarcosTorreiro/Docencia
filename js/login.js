@@ -10,36 +10,22 @@ $(document).ready(function(){
   });
 
   $('#login').click(function() {
-    $.getJSON('../php/usuario.php?tipoFormulario=1&user=' +
-      $('#nombre').val() + '&password=' + $('#password').val(), {
-        format: "json"
-      }).done(function(result) {
-      if (result['validacion']) {
-        var str = result["user"];
-        setCookie("userdata", str, 30);
-      } else {
-        // TODO: Failed;
-      }
-    });
+    var array = {username:$('#nombre').val(), password:$('#password').val()};
+    $.ajax({
+      url:'../php/usuario.php',
+      data:array,
+      type:'POST',
+      success: function(result){
+        if(result['validation']){
+          window.location.href = "http://localhost/docencia/html/index.html";
+        }else{
+          window.location.href = "http://localhost/docencia/html/blog.html";
+        }
+      }});
   });
 
   $('#register').click(function() {
-    console.log('hola');
-    if ($('#pass').val() == $('#copypassword').val()) {
-      $.getJSON('../php/usuario.php?tipoFormulario=2&user=' +
-      $('#nombre').val() + '&password=' + $('#password').val(), {
-        format: "json"
-      }).done(function(result) {
-      if (result['validacion']) {
-        var str = result["user"];
-        setCookie("userdata", str, 30);
-      } else {
-        // TODO: Failed;
-      }
-    });
-    }else{
-      $('#aviso').css('display','block');
-    }
+
 
   });
 

@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
-    if(scroll>=875){
+    if(scroll>=($('section').offset().top-($('section').offset().top*0.1+5))){
       $('nav').css('opacity','1');
     }else{
       $('nav').css('opacity','0.4');
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
    $('#nosotros').click(function(){
      $('html, body').animate({
-        scrollTop: $('h2').offset().top
+        scrollTop: ($('section').offset().top-($('section').offset().top*0.1))
     }, 2000);
    });
 

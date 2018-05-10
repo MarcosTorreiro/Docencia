@@ -2,6 +2,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'MavenPro-Medium';
+  font-size: 1.1vw;
 }
 
 #banner{
@@ -72,6 +73,11 @@ section h2{
   font-size: 2vw;
 }
 
+.ahora{
+  display: flex;
+  flex-direction: row;
+}
+
 article{
   width: 70%;
   margin: auto;
@@ -81,16 +87,25 @@ article{
 }
 
 article img{
-  width: 500px;
-  height: 300px;
+  width: 35vw;
+  height: 50vh;
+  padding: 10px;
 }
+
+/* #historia{
+  font-style: oblique;
+  font-size: 0.9vw;
+} */
 
 #vacio{
   width: 50px;
 }
 
 .informacion{
-  width: 30%;
+  width: 50%;
+  display: flex;
+ justify-content: center;
+ flex-direction: column;
 }
 
 #mapa{
@@ -115,10 +130,10 @@ article img{
   margin: 0;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 35%;
+  width: 50%;
   list-style:  none;
   text-align: justify;
 }

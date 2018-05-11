@@ -6,7 +6,8 @@
   </head>
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/menu.css">
-  <link rel="stylesheet" href="../css/lightbox.css"/>
+  <link rel="stylesheet" href="../css/lightbox.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwiHTlJBE5TLotQGjWtBFGzhBGutZWmRs&callback=initMap"></script>
   <script src="../js/index.js"></script>
@@ -53,7 +54,7 @@
     <article>
         <div class="">
           <div class="ahora">
-            <img src="../other/img/class.jpg" alt="">
+            <img src="../other/img/teixeriños.jpg" alt="">
             <div id="vacio"></div>
               <div class="">
                 <h3>¿Y ahora que?</h3>
@@ -77,11 +78,9 @@
           ¡una llamada! ¿Me han contratado? NO. Es el INEM, y nos ofrece hacer este
           Certificado de Profesionalidad. Nos preguntamos ¿¿¿¿¡¡¡¡WTF!!!!???? ¿Qué
           m****a es eso? ¿Más formación?</b>
-          Y está resultando ser todo lo contrario a lo que esperábamos, AL FIN SOMOS
-          LOS PROTAGONISTAS.
-          Tenemos menos de 30 años y sabemos que nos queda mucho camino por
-          delante, a veces será fácil y a veces no, pero <b>si sabes lo que vales, ve y
-          consigue lo que mereces.</b></p>
+          </p>
+          <p style="text-align:center">Y está resultando ser todo lo contrario a lo que esperábamos, AL FIN SOMOS
+          LOS PROTAGONISTAS.</p>
         </div>
     </article>
     <article id="caracteristicas">
@@ -158,31 +157,66 @@
         <img src="../other/img/photo2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
       </div>
       <div class="column">
-        <img src="../other/img/class.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        <img src="../other/img/photo3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
       </div>
       <div class="column">
-        <img src="../other/img/gallery.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        <img src="../other/img/photo4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
       </div>
+         <div class="column">
+              <img src="../other/img/photo5.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="../other/img/photo6.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="../other/img/photo7.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="../other/img/photo8.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            <div class="column">
+              <img src="../other/img/photo9.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
     </div>
     <!-- The Modal/Lightbox -->
     <div id="myModal" class="modal">
       <span class="close cursor" onclick="closeModal()">&times;</span>
       <div class="modal-content">
         <div class="mySlides">
-          <div class="numbertext">1 / 4</div>
+          <div class="numbertext">1 / 9</div>
           <img src="../other/img/photo1.jpg" style="width:100%; height:800px;">
         </div>
         <div class="mySlides">
-          <div class="numbertext">2 / 4</div>
+          <div class="numbertext">2 / 9</div>
           <img src="../other/img/photo2.jpg" style="width:100%; height:800px;">
         </div>
         <div class="mySlides">
-          <div class="numbertext">3 / 4</div>
-          <img src="../other/img/class.jpg" style="width:100%; height:800px;">
+          <div class="numbertext">3 / 9</div>
+          <img src="../other/img/photo3.jpg" style="width:100%; height:800px;">
         </div>
         <div class="mySlides">
-          <div class="numbertext">4 / 4</div>
-          <img src="../other/img/gallery.jpg" style="width:100%; height:800px;">
+          <div class="numbertext">4 / 9</div>
+          <img src="../other/img/photo4.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 9</div>
+          <img src="../other/img/photo5.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">6 / 9</div>
+          <img src="../other/img/photo6.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">7 / 9</div>
+          <img src="../other/img/photo7.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">8 / 9</div>
+          <img src="../other/img/photo8.jpg" style="width:100%; height:800px;">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">9 / 9</div>
+          <img src="../other/img/photo9.jpg" style="width:100%; height:800px;">
         </div>
         <!-- Next/previous controls -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -190,7 +224,13 @@
       </div>
     </div>
   </div>
-  <footer></footer>
+  <footer>
+    <ul>
+      <a href="http://www.twitter.com"><span id='rrssTwitter' class="fa-stack fa-lg"><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+      <a href="http://www.facebook.com"><span id='rrssFacebook' class="fa-stack fa-lg"><i class="fa fa-facebook fa-stack-1x"></i></span></a>
+      <a href="http://plus.google.com"><span id='rrssGoogle' class="fa-stack fa-lg"><i class="fa fa-google-plus fa-stack-1x"></i></span></a>
+    </ul>
+  </footer>
   </body>
   <script type="text/javascript">
     function initMap() {

@@ -142,7 +142,7 @@ article img{
   margin-bottom: 5px;
 }
 
-span{
+ul span{
   font-size: 20px;
   font-style: oblique;
   text-decoration: underline;
@@ -175,8 +175,45 @@ align-items: center;
 }
 
 footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   position: relative;
   bottom: 0;
   height: 150px;
   background-color: #2C2C2C;
+}
+
+footer ul{
+    margin-right: 5%;
+}
+
+#rrssTwitter{
+  color: 	#B3B3B3;
+  transition: 1s;
+}
+
+#rrssTwitter:hover{
+  color: #1dcaff;
+  transform: scaleY(1.2) scaleX(1.2);
+}
+
+#rrssFacebook{
+  color: 	#B3B3B3;
+  transition: 1s;
+}
+
+#rrssFacebook:hover{
+  color: #4F79F1;
+  transform: scaleY(1.2) scaleX(1.2);
+}
+
+#rrssGoogle{
+  color: 	#B3B3B3;
+  transition: 1s;
+}
+
+#rrssGoogle:hover{
+  color: #E73939;
+  transform: scaleY(1.2) scaleX(1.2);
 }

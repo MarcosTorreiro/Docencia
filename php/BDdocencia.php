@@ -31,4 +31,11 @@ function insertUser($datos, $bd)
     return $resultado->execute();
 }
 
+  function getUser($bd,$user){
+    $query = $bd->prepare('SELECT name, password FROM user WHERE name=:name');
+    $query->execute(array(":name"=>$user));
+    return $query->fetch(PDO::FETCH_ASSOC);
+  }
+
+
  ?>

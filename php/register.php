@@ -10,7 +10,7 @@
 
     $password   = password_hash( $user_password, PASSWORD_BCRYPT, array('cost' => 11));
 
-    $user_data = ['name'=>$name,'pass'=>$password,'profession'=>$profession];
+    $user_data = ['name'=> $name,'pass'=>$password,'profession'=>$profession];
 
     try {
       $query = $bd->prepare('SELECT * FROM user WHERE name=:name');

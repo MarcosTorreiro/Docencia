@@ -19,19 +19,19 @@
         </ul>
       </nav>
     </header>
-        <form id="formlogin" method="post">
+        <form action="" id="formlogin" method="post">
           <legend>Acceso</legend>
           <div class="">
-            <input type="text" placeholder="Usuario">
-            <input type="password" value="" placeholder="Contraseña">
+            <input id="username" name="username" type="text" placeholder="Usuario">
+            <input name="pass" type="password" value="" placeholder="Contraseña">
             <button type="submit" id="login">Entrar</button>
             <p>Todavia no estas registrado? <a id="regis" href="#">Registrate</a></p>
           </div>
         </form>
-        <form action="" id="formregis" method="post" onsubmit="submitForm()">
+        <form action="" id="formregis" method="post">
           <legend>Registro</legend>
           <div>
-            <input name="user" type="text" value="" required placeholder="Usuario">
+            <input id="user" name="user" type="text" value="" required placeholder="Usuario">
             <input id="password" name="password" type="password" value="" required placeholder="Contraseña">
             <input id="repeatPass" name="repeatPass" type="password" value="" required placeholder="Repita contraseña"><label id="aviso">Las contraseñas no coinciden</label>
             <input id="profession" name="profession" type="text" value="" required placeholder="Profesion">
@@ -41,5 +41,6 @@
         </form>
         <div id="mensaje"><p>Errores</p></div>
         <script src="../js/login.js"></script>
+        <script src="../js/cookies.js"></script>
   </body>
 </html>

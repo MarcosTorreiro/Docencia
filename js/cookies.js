@@ -21,11 +21,7 @@ function checkCookie() {
     if (username != "") {
         $('#cambio').html('<ul><li><a id="userlog" href="user.html">'+username+'</a></li><li class="invisible" id="cerrar">Cerrar sesión</li></ul>');
     } else {
-        username = prompt("Please enter your name:", "");
-        if (username != "" && username != null) {
-            setCookie("username", username, 365);
-            alert('hola');
-        }
+        $('#cambio').html('<li id="cambio"><a href="login.html">Acceder</a></li>');
     }
 }
 

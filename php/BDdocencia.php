@@ -20,49 +20,15 @@ function desconectar($bd)
     $bd->close();
 }
 
-function getUser($user)
+function insertUser($datos, $bd)
 {
-    $bd = conectar();
-    $query = "SELECT * FROM usuario where nombre='$user'";
-    $result = $bd->query($query);
-
-    return $result->fetchAll(PDO::FETCH_ASSOC);
-}
-
-function insertUser($datos)
-{
-    $bd = conectar();
-    $query = 'INSERT INTO usuario (nombre, password) VALUES (:usuario,:password)';
+    $query = 'INSERT INTO user(name, password, profession) VALUES(:name, :pass, :profession)';
     $resultado = $bd->prepare($query);
-    $resultado->bindParam(':usuario', $datos['Nombre']);
-    $resultado->bindParam(':password', $datos['password']);
+    $resultado->bindParam(":name", $datos['name']);
+    $resultado->bindParam(":pass", $datos['pass']);
+    $resultado->bindParam(":profession", $datos['profession']);
 
     return $resultado->execute();
 }
-
-function getEntradas()
-{
-    $bd = conectar();
-
-    $query = "SELECT * FROM entradas";
-    $result = $bd->query($query);
-
-    return $result->fetchAll(PDO::FETCH_ASSOC);
-}
-
-// function insertEntrada($datos)
-// {
-//     $bd = conectar();
-//
-//     $query = 'INSERT INTO reservas (idUser, fecha_entrada, fecha_salida, cant_personas,telefono) VALUES(:iduser,:entrada,:salida,:cantidad,:telefono)';
-//     $resultado = $bd->prepare($query);
-//     $resultado->bindParam(':iduser', $datos['iduser']);
-//     $resultado->bindParam(':entrada', $datos['entrada']);
-//     $resultado->bindParam(':salida', $datos['salida']);
-//     $resultado->bindParam(':cantidad', $datos['cantidad']);
-//     $resultado->bindParam(':telefono', $datos['telefono']);
-//
-//     return $resultado->execute();
-// }
 
  ?>

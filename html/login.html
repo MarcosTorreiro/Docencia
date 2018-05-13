@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../css/login.css">
   <link rel="stylesheet" href="../css/menu.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../js/login.js"></script>
   <body>
     <header>
       <nav>
@@ -20,25 +19,27 @@
         </ul>
       </nav>
     </header>
-        <form id="formlogin">
+        <form id="formlogin" method="post">
           <legend>Acceso</legend>
           <div class="">
-            <input type="text" id="nombre" placeholder="Usuario">
-            <input type="password" value="" id="password" placeholder="Contraseña">
+            <input type="text" placeholder="Usuario">
+            <input type="password" value="" placeholder="Contraseña">
             <button type="submit" id="login">Entrar</button>
             <p>Todavia no estas registrado? <a id="regis" href="#">Registrate</a></p>
           </div>
         </form>
-        <form id="formregis">
+        <form action="" id="formregis" method="post" onsubmit="submitForm()">
           <legend>Registro</legend>
           <div>
-            <input type="text" id="user" required placeholder="Usuario">
-            <input type="password" value="" id="pass" required placeholder="Contraseña">
-            <input type="password" value="" id="copypassword" required placeholder="Repita contraseña"><label id="aviso">Las contraseñas no coinciden</label>
-            <input type="text" id="profesion" required placeholder="Profesion">
+            <input name="user" type="text" value="" required placeholder="Usuario">
+            <input id="password" name="password" type="password" value="" required placeholder="Contraseña">
+            <input id="repeatPass" name="repeatPass" type="password" value="" required placeholder="Repita contraseña"><label id="aviso">Las contraseñas no coinciden</label>
+            <input id="profession" name="profession" type="text" value="" required placeholder="Profesion">
             <button type="submit" id="register">Registrarse</button>
             <p>Si ya tienes una cuenta <a id="log" href="#">accede aqui</a>.</p>
           </div>
         </form>
+        <div id="mensaje"><p>Errores</p></div>
+        <script src="../js/login.js"></script>
   </body>
 </html>

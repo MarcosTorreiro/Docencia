@@ -72,3 +72,16 @@ button:hover{
   animation: 0.5s;
   transition: 0.5s;
 }
+
+#mensaje{
+  position: fixed;
+  opacity: 0;
+  background-color: #F48282;
+  color: #FC0101;
+  font-family: 'Signika-Bold';
+  border-top: solid 2px #FC0101;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  transition: 1s;
+}

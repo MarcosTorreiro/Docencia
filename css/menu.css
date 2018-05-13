@@ -52,3 +52,7 @@ li a{
 a:hover{
   color: #F1A42D;
 }
+
+.invisible{
+  display: none;
+}

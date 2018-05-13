@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -13,17 +15,35 @@ function getCookie(cname) {
     }
     return "";
 }
+
 function checkCookie() {
-    var username = getCookie("username");
+    var username = getCookie("User");
     if (username != "") {
-        alert("Welcome again " + username);
+        $('#cambio').html('<ul><li><a id="userlog" href="user.html">'+username+'</a></li><li class="invisible" id="cerrar">Cerrar sesión</li></ul>');
     } else {
         username = prompt("Please enter your name:", "");
         if (username != "" && username != null) {
             setCookie("username", username, 365);
+            alert('hola');
         }
     }
 }
 
+var delete_cookie = function(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
+
+$('#cerrar').click(function(){
+  delete_cookie('User');
+  location.href='login.html';
+});
+
+$( "#userlog" ).click(function(){
+  $('#cerrar').toggle();
+}
+
+);
+
 getCookie('User');
 checkCookie();
+});

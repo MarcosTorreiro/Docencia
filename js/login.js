@@ -9,6 +9,21 @@ $(document).ready(function(){
     $('#formlogin').css("display","block");
   });
 
+  $('#password').focusout(function(){
+    if($('#repeatPass').val()!=$('#password').val()){
+      $('#mensaje').css('opacity',0.7);
+      $('#mensaje p').text('Las contraseñas no coinciden');
+      $('#register').prop( "disabled", true );
+      $('#password').css('border-bottom','solid 2px red');
+      $('#repeatPass').css('border-bottom','solid 2px red');
+    }else{
+      $('#mensaje').css('opacity',0);
+      $('#register').prop( "disabled", false);
+      $('#password').css('border-bottom','solid 2px #2996E6');
+      $('#repeatPass').css('border-bottom','solid 2px #2996E6');
+    }
+  });
+
   $('#repeatPass').focusout(function(){
     if($('#repeatPass').val()!=$('#password').val()){
       $('#mensaje').css('opacity',0.7);

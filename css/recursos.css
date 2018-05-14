@@ -8,10 +8,15 @@ body{
   height: 200px;
   width: 100%;
   background: url('../other/img/black.jpg');
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
-section{
+h2{
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+article{
   width: 70%;
   margin: auto;
   display: flex;
@@ -31,4 +36,52 @@ section{
   width: 150px;
   height: 150px;
   margin-bottom: 10px;
+}
+
+a{
+  color: #F1A42D;
+  text-decoration: none;
+}
+
+a:hover{
+    color: #AFAFAF;
+}
+
+
+footer{
+  position:  absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #2C2C2C;
+}
+
+#rrssTwitter{
+  color: 	#B3B3B3;
+  transition: 1s;
+}
+
+#rrssTwitter:hover{
+  color: #1dcaff;
+  transform: scaleY(1.2) scaleX(1.2);
+}
+
+#rrssFacebook{
+  color: 	#B3B3B3;
+  transition: 1s;
+}
+
+#rrssFacebook:hover{
+  color: #4F79F1;
+  transform: scaleY(1.2) scaleX(1.2);
+}
+
+#rrssGoogle{
+  color: 	#B3B3B3;
+  transition: 1s;
+}
+
+#rrssGoogle:hover{
+  color: #E73939;
+  transform: scaleY(1.2) scaleX(1.2);
 }

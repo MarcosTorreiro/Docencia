@@ -17,9 +17,8 @@ header{
 }
 
 nav{
-  transition: 0.5s;
-  opacity: 0.6;
-  background-color: #2C2C2C;
+  transition: 0.75s;
+  background-color: transparent;
   height: 75px;
 }
 
@@ -51,7 +50,7 @@ li a:hover{
 
 }
 
-#inicio{  
+#inicio{
     font-family: 'MavenPro-Medium';
   color: white;
   font-size: 3vh;

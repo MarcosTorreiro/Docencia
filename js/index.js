@@ -6,9 +6,9 @@ $(document).ready(function(){
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
     if(scroll>=($('section').offset().top-($('section').offset().top*0.1+5))){
-      $('nav').css('opacity','1');
+      $('nav').css('background-color','#2C2C2C');
     }else{
-      $('nav').css('opacity','0.4');
+      $('nav').css('background-color','transparent');
     }
     if(scroll>=275){
       $('#presentacion h1').css('opacity', 0);

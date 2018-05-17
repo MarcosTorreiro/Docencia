@@ -37,5 +37,21 @@ function insertUser($datos, $bd)
     return $query->fetch(PDO::FETCH_ASSOC);
   }
 
+  function getTags($bd){
+    $query = $bd->prepare('SELECT * FROM tags');
+    $query->execute();
+    return $query->fetchAll(PDO::FETCH_ASSOC);
+  }
 
+  function insertEntrada($bd, $datos){
+    $fecha = date('Y-m-d H:i:s');
+    $query = 'INSERT INTO entrada(iduser, title, body, tags, fecha) VALUES(:iduser, :title, :body, :tags, :fecha)';
+    $resultado = $bd->prepare($query);
+    $resultado->bindParam(":iduser", $datos['iduser']);
+    $resultado->bindParam(":title", $datos['title']);
+    $resultado->bindParam(":body", $datos['body']);
+    $resultado->bindParam(":tags", $datos['tags']);
+    $resultado->bindParam(":date", $fecha);
+    return $resultado->execute();
+  }
  ?>

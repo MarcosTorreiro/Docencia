@@ -1,18 +1,10 @@
 $(document).ready(function(){
 
-  $(function() {
-    $('div#froala-editor').froalaEditor({
-      theme: 'dark',
-      toolbarBottom: false,
-      height: 350,
-      toolbarButtons: ['fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript',
-      'superscript', 'fontFamily', 'fontSize', '|', 'color', 'emoticons', 'inlineStyle',
-      'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent',
-      'indent', '-', 'insertLink', 'insertImage', 'insertVideo', 'insertFile', 'insertTable',
-       '|', 'quote', 'insertHR', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html']
-
-    });
-  });
+  ClassicEditor
+       .create( document.querySelector( '#editor' ) )
+       .catch( error => {
+           console.error( error );
+       } );
 
   $('#cancel').click(function(){
     location.href="../html/blog.html";
@@ -20,7 +12,6 @@ $(document).ready(function(){
 
   $('#formentrada').bind('submit', function(e){
       $('#user').val($('#userlog').text());
-      $('#body').val($('div#froala-editor').froalaEditor('html.get'));
     var isValid = true;
     if (!isValid) {
       e.preventDefault();

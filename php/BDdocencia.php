@@ -51,7 +51,7 @@ function insertUser($datos, $bd)
     $resultado->bindParam(":title", $datos['title']);
     $resultado->bindParam(":body", $datos['body']);
     $resultado->bindParam(":tags", $datos['tags']);
-    $resultado->bindParam(":date", $fecha);
+    $resultado->bindParam(":fecha", $fecha);
     return $resultado->execute();
   }
  ?>

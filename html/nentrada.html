@@ -3,19 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Docencia para la formación del empleo</title>
-    <link href="../css/themes/dark.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/nentrada.css">
     <link rel="stylesheet" href="../css/menu.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/nentrada.js"></script>
     <script src="../js/cookies.js"></script>
-    <!-- Include Editor style. -->
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css' rel='stylesheet' type='text/css' />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script src="../js/ckeditor.js"></script>
 
-    <!-- Include JS file. -->
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.min.js'></script>
     <body>
     <header>
       <nav>
@@ -36,9 +30,8 @@
           <h2>Nueva entrada</h2>
           <form id="formentrada" method="post">
             <input id="user" type="hidden" name="user" value="">
-            <input id="body" type="hidden" name="body" value="">
             Titulo: <input type="text" name="title" value="">
-            Cuerpo:<div name="body" id="froala-editor"></div>
+            Cuerpo:<textarea name="content" id="editor"></textarea>
             Tags: <select id="tags" name="tags">
                       <option value="Metodologías">Metodologías</option>
                       <option value="Recursos de Internet">Recursos de Internet</option>

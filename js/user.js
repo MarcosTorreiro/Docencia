@@ -17,10 +17,7 @@ $(document).ready(function(){
       $('#password').css('border-bottom','solid 2px red');
       $('#repeatPass').css('border-bottom','solid 2px red');
     }else{
-      $('#mensaje').css('opacity',0);
       $('#register').prop( "disabled", false);
-      $('#password').css('border-bottom','solid 2px #2996E6');
-      $('#repeatPass').css('border-bottom','solid 2px #2996E6');
     }
   });
 
@@ -32,12 +29,11 @@ $(document).ready(function(){
       $('#password').css('border-bottom','solid 2px red');
       $('#repeatPass').css('border-bottom','solid 2px red');
     }else{
-      $('#mensaje').css('opacity',0);
       $('#register').prop( "disabled", false);
-      $('#password').css('border-bottom','solid 2px #2996E6');
-      $('#repeatPass').css('border-bottom','solid 2px #2996E6');
     }
   });
+
+  $('nav').css('background-color','#2C2C2C','opacity','0.5');
 
   function getCookie(cname) {
       var name = cname + "=";
@@ -58,8 +54,9 @@ $(document).ready(function(){
   $('#user').text(getCookie('User'));
 
   $('#close').click(function(){
-    delete_cookie('User');
-    location.href='login.html';
+    document.cookie = 'User=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    location.href='index.html';
   });
+
 
 });

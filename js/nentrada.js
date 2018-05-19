@@ -30,7 +30,7 @@ $(document).ready(function(){
           console.log(data);
           // Do things with returned data such as handling errors and success
           if(data.data.result=='Success'){
-            location.href = '../html/entrada.html';
+            location.href = '../html/blog.html';
           }else{
             if(data.data.code=='Ex001'){
               $('#mensaje').css('opacity',0.7);

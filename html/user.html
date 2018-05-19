@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../css/user.css">
   <link rel="stylesheet" href="../css/menu.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../js/user.js"></script>
+  <script src="../js/cookies.js"></script>
   <body>
     <header>
       <nav>
@@ -25,7 +27,7 @@
             <p>Profesion:<span id="profession"></span></p>
             <div id="botones">
               <button type="button" id="modifi">Modificar datos</button>
-              <button type="submit" id="close">Cerrar sesion</button>
+              <button type="button" id="close">Cerrar sesion</button>
             </div>
           </div>
         </form>
@@ -36,8 +38,10 @@
             <input id="password" name="password" type="password" value="" required placeholder="Contraseña">
             <input id="repeatPass" name="repeatPass" type="password" value="" required placeholder="Repita contraseña">
             <input id="profession" name="profession" type="text" value="" required placeholder="Profesion">
-            <button type="button" id="cancel">Cancelar</button>
-            <button type="submit" id="save">Guardar datos</button>
+            <div>
+              <button type="button" id="cancel">Cancelar</button>
+              <button type="submit" id="save">Guardar datos</button>
+            </div>
           </div>
         </form>
         <div id="mensaje"><p>Errores</p></div>
@@ -48,7 +52,5 @@
             <a href="http://plus.google.com"><span id='rrssGoogle' class="fa-stack fa-lg"><i class="fa fa-google-plus fa-stack-1x"></i></span></a>
           </ul>
         </footer>
-        <script src="../js/user.js"></script>
-        <script src="../js/cookies.js"></script>
   </body>
 </html>

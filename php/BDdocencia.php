@@ -54,4 +54,18 @@ function insertUser($datos, $bd)
     $resultado->bindParam(":fecha", $fecha);
     return $resultado->execute();
   }
+
+  function getEntradas($bd, $tag){
+    $query = 'SELECT * FROM entrada ';
+    if($tag != ''){
+      $query .= 'WHERE tags="'.$tag.'"';
+      $resultado = $bd->prepare($query);
+      $resultado->execute();
+      return $resultado->fetch(PDO::FETCH_ASSOC);
+    }else{
+      $resultado = $bd->prepare($query);
+      $resultado->execute();
+      return $resultado->fetchAll(PDO::FETCH_ASSOC);
+    }
+  }
  ?>

@@ -17,10 +17,7 @@ $(document).ready(function(){
       $('#password').css('border-bottom','solid 2px red');
       $('#repeatPass').css('border-bottom','solid 2px red');
     }else{
-      $('#mensaje').css('opacity',0);
       $('#register').prop( "disabled", false);
-      $('#password').css('border-bottom','solid 2px #2996E6');
-      $('#repeatPass').css('border-bottom','solid 2px #2996E6');
     }
   });
 
@@ -32,12 +29,10 @@ $(document).ready(function(){
       $('#password').css('border-bottom','solid 2px red');
       $('#repeatPass').css('border-bottom','solid 2px red');
     }else{
-      $('#mensaje').css('opacity',0);
       $('#register').prop( "disabled", false);
-      $('#password').css('border-bottom','solid 2px #2996E6');
-      $('#repeatPass').css('border-bottom','solid 2px #2996E6');
     }
   });
+    $('nav').css('background-color','#2C2C2C','opacity','0.5');
 });
 
 $('#formregis').bind('submit', function(e){

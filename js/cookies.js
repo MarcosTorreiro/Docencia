@@ -25,12 +25,6 @@ function checkCookie() {
     }
 }
 
-$( "#userlog" ).click(function(){
-  $('#cerrar').toggle();
-}
-
-);
-
 getCookie('User');
 checkCookie();
 });

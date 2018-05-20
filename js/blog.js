@@ -7,6 +7,7 @@ $(document).ready(function(){
     location.href="../html/nentrada.html";
   });
 
+
   $.getJSON("../php/blog.php", function(result){
         $.each(result, function(i, field){
           entradas[i] = field;

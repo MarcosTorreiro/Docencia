@@ -20,8 +20,10 @@ function checkCookie() {
     var username = getCookie("User");
     if (username != "") {
         $('#cambio').html('<li><a id="userlog" href="user.html">'+username+'</a></li>');
+        $('#nentrada').css('display','block');
     } else {
         $('#cambio').html('<li><a id="cambio" href="login.html">Acceder</a></li>');
+        $('#nentrada').css('display','none');
     }
 }
 

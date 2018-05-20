@@ -68,4 +68,12 @@ function insertUser($datos, $bd)
       return $resultado->fetchAll(PDO::FETCH_ASSOC);
     }
   }
+
+  function getEntrada($bd, $id){
+    $query = 'SELECT * FROM entrada where id = :id';
+    $resultado = $bd->prepare($query);
+    $resultado->bindParam(":id", $id);
+    $resultado->execute();
+    return $resultado->fetch(PDO::FETCH_ASSOC);
+  }
  ?>

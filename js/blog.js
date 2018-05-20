@@ -11,7 +11,7 @@ $(document).ready(function(){
         $.each(result, function(i, field){
           entradas[i] = field;
           html+='<article>'+
-          '<a href="#"><h3> - '+field['title']+'</h3></a><div>'+truncate(field['body'])+'</p></div><p>Tags: <i class="fa fa-ticket"></i> '+field['tags']+', <i class="fa fa-ticket"></i> Todas</p></article><hr>';
+          '<a href="../html/display.html?entrada='+field['id']+'"><h3> - '+field['title']+'</h3></a><div>'+truncate(field['body'])+'</p></div><p>Tags: <i class="fa fa-ticket"></i> '+field['tags']+', <i class="fa fa-ticket"></i> Todas</p></article><hr>';
         });
         $('#containerEn').html(html);
     });
@@ -21,17 +21,16 @@ $(document).ready(function(){
       $.each(entradas, function(i, field){
         if(field['tags']==$('select').val()){
           html+='<article>'+
-          '<a href="#"><h3> - '+field['title']+'</h3></a><div>'+truncate(field['body'])+'</p></div><p>Tags: <i class="fa fa-ticket"></i> '+field['tags']+', <i class="fa fa-ticket"></i> Todas</p></article><hr>';
-        }
+          '<a href="../html/display.html?entrada='+field['id']+'"><h3> - '+field['title']+'</h3></a><div>'+truncate(field['body'])+'</p></div><p>Tags: <i class="fa fa-ticket"></i> '+field['tags']+', <i class="fa fa-ticket"></i> Todas</p></article><hr>';
+      }
         if($("select option:first").is(':selected')){
           html+='<article>'+
-          '<a href="#"><h3> - '+field['title']+'</h3></a><div>'+truncate(field['body'])+'</p></div><p>Tags: <i class="fa fa-ticket"></i> '+field['tags']+', <i class="fa fa-ticket"></i> Todas</p></article><hr>';
-        }
+          '<a href="../html/display.html?entrada='+field['id']+'"><h3> - '+field['title']+'</h3></a><div>'+truncate(field['body'])+'</p></div><p>Tags: <i class="fa fa-ticket"></i> '+field['tags']+', <i class="fa fa-ticket"></i> Todas</p></article><hr>';
+      }
       });
       $('#containerEn').html('');
       $('#containerEn').html(html);
     });
-
 });
 
 function truncate(String){

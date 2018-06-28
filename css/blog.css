@@ -1,0 +1,93 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'MavenPro-Medium';
+}
+
+#banner{
+  height: 200px;
+  width: 100%;
+  background: url('../other/img/black.jpg');
+  margin-bottom: 5%;
+}
+
+section{
+  width: 70%;
+  margin: auto;
+}
+
+button{
+  font-size: 1vw;
+  color: #AFAFAF;
+  background-color: transparent;
+  border: solid 2px #AFAFAF;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'MavenPro-Medium';
+  transition: 0.75s opacity;
+}
+
+button:hover{
+  color: #F1A42D;
+  border: solid 2px #F1A42D;
+  cursor: pointer;
+}
+
+h1{
+  text-align:center;
+}
+
+#containerEn{
+  width: 80%;
+  margin: auto;
+}
+
+article{
+  font-size: 0.7vw;
+}
+
+a{
+  font-size: 1vw;
+  text-decoration: none;
+  color: black;
+
+}
+
+a:hover{
+  color: #F1A42D;
+}
+
+article div{
+  margin-left: 3%;
+}
+
+select{
+  font-size: 1vw;
+  padding: 10px;
+  margin-bottom: 2%;
+  color: #AFAFAF;
+  background-color: transparent;
+  border: solid 2px #AFAFAF;
+  border-radius: 10px;
+  padding: 7px;
+  font-family: 'MavenPro-Medium';
+  transition: 0.75s opacity;
+  outline:0px;
+}
+
+select:hover{
+  color: #F1A42D;
+  border: solid 2px #F1A42D;
+}
+
+select:focus{
+  color: #F1A42D;
+  border: solid 2px #F1A42D;
+  outline:0px;
+}
+
+.opciones{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

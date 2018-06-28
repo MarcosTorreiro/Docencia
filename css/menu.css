@@ -17,16 +17,13 @@ header{
 }
 
 nav{
-  transition: 0.5s;
-  opacity: 0.6;
-  background-color: #2C2C2C;
-}
-
-nav:hover{
-  opacity: 1;
+  transition: 0.75s;
+  background-color: transparent;
+  height: 75px;
 }
 
 nav ul{
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -36,7 +33,6 @@ nav ul{
 }
 
 nav li {
-  width: 200px;
   margin: 5px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -49,10 +45,20 @@ li a{
   color: white;
 }
 
-a:hover{
+li a:hover{
   color: #F1A42D;
+
 }
 
-.invisible{
-  display: none;
+#inicio{
+    font-family: 'MavenPro-Medium';
+  color: white;
+  font-size: 3vh;
+  background-color: transparent;
+  border: none;
+}
+
+#inicio:hover{
+    color: #F1A42D;
+    cursor: pointer;
 }

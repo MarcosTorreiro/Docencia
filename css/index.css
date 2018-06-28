@@ -104,13 +104,21 @@ article img{
 .informacion{
   width: 50%;
   display: flex;
- justify-content: center;
- flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.informacion span{
+  font-weight:bolder;
 }
 
 #mapa{
   width: 400px;
   height: 300px;
+}
+
+h3{
+  text-align: center;
 }
 
 

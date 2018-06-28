@@ -1,0 +1,76 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'MavenPro-Medium';
+}
+
+#banner{
+  height: 200px;
+  width: 100%;
+  background: url('../other/img/black.jpg');
+  margin-bottom: 2%;
+}
+
+section{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.button{
+  font-size: 1vw;
+  color: #F1A42D;
+  background-color: transparent;
+  border: solid 2px #F1A42D;
+  border-radius: 10px;
+  padding: 7px;
+  font-family: 'MavenPro-Medium';
+  transition: 0.75s opacity;
+}
+
+.button:hover{
+  color: #AFAFAF;
+  border: solid 2px #AFAFAF;
+  cursor: pointer;
+}
+
+.ck-content{
+  height: 300px;
+}
+
+select, .ck-content, #title{
+  margin-bottom: 2%;
+}
+
+select, .button, #title{
+  font-size: 1.2vw;
+  color: #AFAFAF;
+  background-color: transparent;
+  border: solid 2px #AFAFAF;
+  border-radius: 10px;
+  padding: 7px;
+  font-family: 'MavenPro-Medium';
+  transition: 0.75s opacity;
+  outline:0px;
+}
+
+select:hover, .button:hover, #title:hover{
+  color: #F1A42D;
+  border: solid 2px #F1A42D;
+}
+
+select:focus, #title:focus{
+  color: #F1A42D;
+  border: solid 2px #F1A42D;
+  outline:0px;
+}
+
+label{
+  margin-bottom: 5px;
+}

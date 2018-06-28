@@ -8,24 +8,16 @@
   src: url('../other/fonts/Signika-Bold.ttf');
 }
 
-#aviso{
-  display: none;
-  color: red;
-}
-
 body{
   background-image: url('../other/img/class.jpg');
 }
 
 nav{
   background-color: #2C2C2C;
-    opacity: 0.8;
+  opacity: 0.5;
 }
 
 form{
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #DCDBDB;
   display: flex;
   width: 25%;
   margin: auto;
@@ -34,7 +26,10 @@ form{
   justify-content: center;
   flex-direction: column;margin-top: 18%;
   font-family:'Signika-Light';
-  opacity: 0.6;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #DCDBDB;
+  opacity: 0.8;
 }
 
 legend{
@@ -62,7 +57,6 @@ input:focus{
   outline:0px;
   border-bottom: solid 2px #F1A42D;
   transition: all 0.5s;
-  opacity: 1;
 }
 
 button{
@@ -77,11 +71,6 @@ button{
   border-radius: 10px;
 }
 
-#formregis{
-  display: none;
-}
-
-
 button:hover{
   border: none;
   background-color: #F1A42D;
@@ -93,15 +82,11 @@ button:hover{
   cursor: pointer;
 }
 
+#usermodifi{
+  display: none;
+}
+
 #mensaje{
-  position: fixed;
-  opacity: 0;
-  background-color: #F48282;
-  color: #FC0101;
-  font-family: 'Signika-Bold';
-  border-top: solid 2px #FC0101;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  transition: 1s;
+  display: none;
+  color: red;
 }

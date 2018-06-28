@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../css/login.css">
   <link rel="stylesheet" href="../css/menu.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/cookies.js"></script>
   <body>
     <header>
       <nav>
@@ -14,7 +16,6 @@
           <li><a id="inicio" href="index.html">Inicio</a></li>
           <li><a id="saber" href="index.html">Nosotros</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="recursos.html">Recursos</a></li>
           <li><a id="cambio" href="login.html">Acceder</a></li>
         </ul>
       </nav>
@@ -33,14 +34,12 @@
           <div>
             <input id="user" name="user" type="text" value="" required placeholder="Usuario">
             <input id="password" name="password" type="password" value="" required placeholder="Contraseña">
-            <input id="repeatPass" name="repeatPass" type="password" value="" required placeholder="Repita contraseña"><label id="aviso">Las contraseñas no coinciden</label>
+            <input id="repeatPass" name="repeatPass" type="password" value="" required placeholder="Repita contraseña">
             <input id="profession" name="profession" type="text" value="" required placeholder="Profesion">
             <button type="submit" id="register">Registrarse</button>
             <p>Si ya tienes una cuenta <a id="log" href="#">accede aqui</a>.</p>
           </div>
         </form>
         <div id="mensaje"><p>Errores</p></div>
-        <script src="../js/login.js"></script>
-        <script src="../js/cookies.js"></script>
   </body>
 </html>

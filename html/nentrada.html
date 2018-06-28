@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Docencia para la formación del empleo</title>
+    <link rel="stylesheet" href="../css/nentrada.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/nentrada.js"></script>
+    <script src="../js/cookies.js"></script>
+    <script src="../js/ckeditor.js"></script>
+    <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a id="inicio" href="index.html">Inicio</a></li>
+          <li><a id="saber" href="index.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li id="cambio"><a href="login.html">Acceder</a></li>
+        </ul>
+      </nav>
+      </header>
+      <div id="banner">
+        <div id="photo">
+          <div class="capa-gradiente"></div>
+        </div>
+      </div>
+      <section>
+          <h2>Nueva entrada</h2>
+          <form id="formentrada" method="post">
+            <input id="user" type="hidden" name="user" value="">
+            <label>Titulo:</label> <input id="title" type="text" name="title" value="">
+            <label>Cuerpo:</label><textarea name="content" id="editor"></textarea>
+            <label>Tag:</label><select id="tags" name="tags">
+                      <option value="Metodologías">Metodologías</option>
+                      <option value="Recursos de Internet">Recursos de Internet</option>
+                      <option value="Recursos audiovisuales">Recursos audiovisuales</option>
+                      <option value="Recursos gráficos">Recursos gráficos</option>
+                      <option value="Entrevistas">Entrevistas</option>
+                      <option value="Reflexiones">Reflexiones</option>
+                      <option value="Técnicas y dinámicas de grupos">Técnicas y dinámicas de grupos</option>
+                 </select>
+                 <div>
+                   <input id="save" class="button" type="submit" name="save" value="Guardar">
+                   <input id="cancel" class="button" type="button" name="cancel" value="Cancelar">
+                 </div>
+          </form>
+      </section>
+    </body>
+  </html>

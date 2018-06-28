@@ -9,87 +9,98 @@ $(document).ready(function(){
     $('#formlogin').css("display","block");
   });
 
-  $('#repeatPass').focusout(function(){
-    if($('#repeatPass').val()!=$('#password').val()){
+  $('#password').focusout(function(){
+    if($('#repeatPass').val()!=$('#password').val() && $('#repeatPass').val().length > 0){
       $('#mensaje').css('opacity',0.7);
       $('#mensaje p').text('Las contraseñas no coinciden');
       $('#register').prop( "disabled", true );
       $('#password').css('border-bottom','solid 2px red');
       $('#repeatPass').css('border-bottom','solid 2px red');
     }else{
-      $('#mensaje').css('opacity',0);
       $('#register').prop( "disabled", false);
-      $('#password').css('border-bottom','solid 2px #2996E6');
-      $('#repeatPass').css('border-bottom','solid 2px #2996E6');
+      $('#mensaje').css('opacity',0);
     }
   });
-});
 
-$('#formregis').bind('submit', function(e){
-  var isValid = true;
-  if (!isValid) {
-    e.preventDefault();
-    return false;
-  } else {
-    var data = $("#formregis").serialize();
-    $.ajax({
-      type: 'POST',
-      url: '../php/register.php',
-      data: data,
-      beforeSend: function() {
-        // Do stuff before sending
-      },
-      success: function(data) {
-        //Do things with returned data such as handling errors and success
-        if(data.data.result=='Success'){
-          setCookie($('#user').val());
-          location.href = '../html/index.html';
-        }else{
-          if(data.data.code=='Ex001'){
-            $('#mensaje').css('opacity',0.7);
-            $('#mensaje p').text('Ya existe un usuario con ese nombre');
-          }else{
-            $('#mensaje').css('opacity',0.7);
-            $('#mensaje p').text('Error al registrarse. Intentalo de nuevo');
+  $('#repeatPass').focusout(function(){
+    if($('#repeatPass').val()!=$('#password').val() && $('#password').val().length > 0){
+      $('#mensaje').css('opacity',0.7);
+      $('#mensaje p').text('Las contraseñas no coinciden');
+      $('#register').prop( "disabled", true );
+      $('#password').css('border-bottom','solid 2px red');
+      $('#repeatPass').css('border-bottom','solid 2px red');
+    }else{
+      $('#register').prop( "disabled", false);
+      $('#mensaje').css('opacity',0);
+    }
+  });
+    $('nav').css('background-color','#2C2C2C','opacity','0.5');
+
+    $('#formregis').bind('submit', function(e){
+      var isValid = true;
+      if (!isValid) {
+        e.preventDefault();
+        return false;
+      } else {
+        var data = $("#formregis").serialize();
+        $.ajax({
+          type: 'POST',
+          url: '../php/register.php',
+          data: data,
+          beforeSend: function() {
+            // Do stuff before sending
+          },
+          success: function(data) {
+            //Do things with returned data such as handling errors and success
+            if(data.data.result=='Success'){
+              setCookie($('#user').val());
+              location.href = '../html/index.html';
+            }else{
+              if(data.data.code=='Ex001'){
+                $('#mensaje').css('opacity',0.7);
+                $('#mensaje p').text('Ya existe un usuario con ese nombre');
+              }else{
+                $('#mensaje').css('opacity',0.7);
+                $('#mensaje p').text('Error al registrarse. Intentalo de nuevo');
+              }
+            }
           }
-        }
+        });
+        e.preventDefault();
+        return false;
       }
     });
-    e.preventDefault();
-    return false;
-  }
-});
 
-
-$('#formlogin').bind('submit', function(e){
-  var isValid = true;
-  if (!isValid) {
-    e.preventDefault();
-    return false;
-  } else {
-    var data = $("#formlogin").serialize();
-    $.ajax({
-      type: 'POST',
-      url: '../php/login.php',
-      data: data,
-      beforeSend: function() {
-        // Do stuff before sending
-      },
-      success: function(data) {
-        console.log(data);
-        //Do things with returned data such as handling errors and success
-        if(data.data.result=='Success'){
-          setCookie($('#username').val());
-          location.href = '../html/index.html';
-        }else{
-          $('#mensaje').css('opacity',0.7);
-          $('#mensaje p').text('El usuario o la contraseña son incorrectos');
-        }
+    $('#formlogin').bind('submit', function(e){
+      var isValid = true;
+      if (!isValid) {
+        e.preventDefault();
+        return false;
+      } else {
+        var data = $("#formlogin").serialize();
+        $.ajax({
+          type: 'POST',
+          url: '../php/login.php',
+          data: data,
+          beforeSend: function() {
+            // Do stuff before sending
+          },
+          success: function(data) {
+            //Do things with returned data such as handling errors and success
+            if(data.data.result=='Success'){
+              setCookie($('#username').val());
+              location.href = '../html/index.html';
+            }else{
+              $('#mensaje').css('opacity',0.7);
+              $('#mensaje p').text('El usuario o la contraseña son incorrectos');
+            }
+          }
+        });
+        e.preventDefault();
+        return false;
       }
     });
-    e.preventDefault();
-    return false;
-  }
+
 });
 
 function setCookie(cvalue) {

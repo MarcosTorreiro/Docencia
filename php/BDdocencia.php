@@ -3,9 +3,9 @@
 function conectar()
 {
     /* Conectar a una base de datos de MySQL invocando al controlador */
-    $dsn = 'mysql:dbname=id5834952_docencia;host=localhost';
-    $usuario = 'id5834952_root';
-    $contraseña = 'markos_13';
+    $dsn = 'mysql:dbname=docencia;host=localhost';
+    $usuario = 'root';
+    $contraseña = '';
 
     try {
         $bd = new PDO($dsn, $usuario, $contraseña);

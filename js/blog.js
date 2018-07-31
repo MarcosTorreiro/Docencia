@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 function truncate(String){
    if (String.length > 150)
-      return String.substring(0,150)+'...';
+      return String.substring(0,400)+'...';
    else
       return string;
 };

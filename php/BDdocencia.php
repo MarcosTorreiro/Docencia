@@ -3,9 +3,9 @@
 function conectar()
 {
     /* Conectar a una base de datos de MySQL invocando al controlador */
-    $dsn = 'mysql:dbname=docencia;host=localhost';
-    $usuario = 'root';
-    $contraseña = '';
+    $dsn = 'mysql:dbname=id5834952_docencia;host=localhost';
+    $usuario = 'id5834952_root';
+    $contraseña = 'markos_13';
 
     try {
         $bd = new PDO($dsn, $usuario, $contraseña);
@@ -59,10 +59,12 @@ function insertUser($datos, $bd)
     $query = 'SELECT * FROM entrada ';
     if($tag != ''){
       $query .= 'WHERE tags="'.$tag.'"';
+      $query .= 'ORDER BY fecha DESC';
       $resultado = $bd->prepare($query);
       $resultado->execute();
       return $resultado->fetch(PDO::FETCH_ASSOC);
     }else{
+      $query .= 'ORDER BY fecha DESC';
       $resultado = $bd->prepare($query);
       $resultado->execute();
       return $resultado->fetchAll(PDO::FETCH_ASSOC);
